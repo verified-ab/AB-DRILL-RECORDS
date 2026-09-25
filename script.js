@@ -1,48 +1,101 @@
-// AB DRILL RECORDS - Main JavaScript
+// ================================
+// MOBILE MENU
+// ================================
 
-document.addEventListener("DOMContentLoaded", function () {
+const menuButton = document.getElementById("menu-button");
+const navigation = document.getElementById("nav");
 
-    // Current year in footer
-    const year = document.getElementById("year");
+if (menuButton && navigation) {
 
-    if (year) {
-        year.textContent = new Date().getFullYear();
-    }
+  menuButton.addEventListener("click", function () {
 
-    // Mobile menu
-    const menuButton = document.getElementById("menu-button");
-    const nav = document.getElementById("nav");
+    navigation.classList.toggle("active");
 
-    if (menuButton && nav) {
-        menuButton.addEventListener("click", function () {
-            nav.classList.toggle("active");
-        });
-    }
+  });
 
-    // Close mobile menu when a link is clicked
-    const navLinks = document.querySelectorAll("nav a");
 
-    navLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
-            if (nav) {
-                nav.classList.remove("active");
-            }
-        });
+  // Close menu when a link is clicked
+
+  const navigationLinks =
+    navigation.querySelectorAll("a");
+
+  navigationLinks.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+      navigation.classList.remove("active");
+
     });
 
-    // Smooth scrolling
-    navLinks.forEach(function (link) {
-        link.addEventListener("click", function (event) {
-            const target = document.querySelector(this.getAttribute("href"));
+  });
 
-            if (target) {
-                event.preventDefault();
+}
 
-                target.scrollIntoView({
-                    behavior: "smooth"
-                });
-            }
-        });
-    });
+
+
+// ================================
+// FOOTER YEAR
+// ================================
+
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+
+  yearElement.textContent =
+    new Date().getFullYear();
+
+}
+
+
+
+// ================================
+// SMOOTH SCROLL
+// ================================
+
+document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+
+  link.addEventListener("click", function (event) {
+
+    const targetId =
+      this.getAttribute("href");
+
+    if (targetId === "#") {
+      return;
+    }
+
+    const target =
+      document.querySelector(targetId);
+
+    if (target) {
+
+      event.preventDefault();
+
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+    }
+
+  });
+
+});
+
+
+
+// ================================
+// IMAGE ERROR CHECK
+// ================================
+
+document.querySelectorAll("img").forEach(function (image) {
+
+  image.addEventListener("error", function () {
+
+    console.log(
+      "Image could not be loaded:",
+      image.getAttribute("src")
+    );
+
+  });
 
 });
