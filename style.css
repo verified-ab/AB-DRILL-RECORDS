@@ -1,0 +1,146 @@
+/* AB DRILL RECORDS - Main Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #000000;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #aaa;
+}
+
+/* Navigation */
+nav {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Hero */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #000000, #222222);
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #ccc;
+    font-size: 18px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #ffcc00;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #151515;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: #000000;
+    text-align: center;
+    padding: 30px 20px;
+    color: #999;
+    border-top: 1px solid #333;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+}
