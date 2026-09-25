@@ -1,146 +1,834 @@
-/* AB DRILL RECORDS - Main Styles */
+/* =========================
+   RESET
+========================= */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0b0b0b;
-    color: #ffffff;
-    line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050505;
+  color: #ffffff;
+  line-height: 1.6;
 }
 
-/* Header */
-header {
-    background: #000000;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #333;
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
-header h1 {
-    font-size: 32px;
-    letter-spacing: 2px;
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-header p {
-    color: #aaa;
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 6%;
+
+  background: rgba(0, 0, 0, 0.95);
+  border-bottom: 1px solid #222;
 }
 
-/* Navigation */
-nav {
-    background: #111;
-    padding: 15px;
-    text-align: center;
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 12px;
-    font-weight: bold;
+
+.logo {
+  width: 55px;
+  height: 55px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
 }
 
-nav a:hover {
-    color: #ffcc00;
+
+.brand-name h1 {
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
-/* Hero */
+
+.brand-name span {
+  font-size: 10px;
+  color: #aaa;
+  letter-spacing: 2px;
+}
+
+
+.navigation {
+  display: flex;
+  gap: 25px;
+}
+
+
+.navigation a {
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+
+.navigation a:hover {
+  opacity: 0.6;
+}
+
+
+.menu-button {
+  display: none;
+
+  background: transparent;
+  border: none;
+
+  color: white;
+
+  font-size: 28px;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #000000, #222222);
+  min-height: 90vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 60px;
+
+  padding: 80px 8%;
 }
 
-.hero h2 {
-    font-size: 48px;
-    margin-bottom: 15px;
+
+.hero-image-container {
+  display: flex;
+  justify-content: center;
 }
 
-.hero p {
-    color: #ccc;
-    font-size: 18px;
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+
+  border-radius: 10px;
+
+  object-fit: cover;
 }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
-    background: #ffffff;
-    color: #000000;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+
+.hero-content {
+  max-width: 600px;
 }
 
-.btn:hover {
-    background: #ffcc00;
+
+.small-title {
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  color: #aaa;
+
+  margin-bottom: 10px;
 }
 
-/* Sections */
-section {
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
+
+.hero-content h2 {
+  font-size: clamp(50px, 8vw, 100px);
+
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+
+  margin-bottom: 15px;
 }
 
-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 32px;
+
+.hero-content h3 {
+  font-size: 22px;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 25px;
 }
 
-/* Cards */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+
+.hero-content p {
+  color: #bbb;
+
+  max-width: 500px;
+
+  margin-bottom: 30px;
 }
 
-.card {
-    background: #151515;
-    padding: 25px;
-    border-radius: 10px;
-    border: 1px solid #333;
+
+.hero-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
 }
 
-.card h3 {
-    margin-bottom: 10px;
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button {
+  display: inline-block;
+
+  padding: 13px 25px;
+
+  background: white;
+
+  color: black;
+
+  border: 1px solid white;
+
+  font-weight: bold;
+
+  transition: 0.3s;
 }
 
-/* Footer */
+
+.button:hover {
+  background: transparent;
+
+  color: white;
+}
+
+
+.secondary-button {
+  background: transparent;
+
+  color: white;
+}
+
+
+.secondary-button:hover {
+  background: white;
+
+  color: black;
+}
+
+
+.small-button {
+  display: inline-block;
+
+  margin-top: 12px;
+
+  padding: 8px 15px;
+
+  border: 1px solid #555;
+
+  font-size: 12px;
+
+  transition: 0.3s;
+}
+
+
+.small-button:hover {
+  background: white;
+
+  color: black;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  padding: 100px 8%;
+}
+
+
+.dark-section {
+  background: #0b0b0b;
+}
+
+
+.section-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 50px;
+}
+
+
+.section-heading span {
+  color: #666;
+
+  font-size: 14px;
+}
+
+
+.section-heading h2 {
+  font-size: 38px;
+
+  letter-spacing: -1px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+
+.about-image img {
+  width: 100%;
+
+  max-width: 500px;
+
+  border-radius: 8px;
+}
+
+
+.about-content h3 {
+  font-size: 28px;
+
+  margin-bottom: 20px;
+}
+
+
+.about-content p {
+  color: #aaa;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+.album-card {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+
+.album-image img {
+  width: 100%;
+
+  max-width: 550px;
+
+  border-radius: 8px;
+}
+
+
+.album-info h3 {
+  font-size: 45px;
+
+  line-height: 1.1;
+
+  margin-bottom: 10px;
+}
+
+
+.artist-name {
+  color: #aaa;
+
+  margin-bottom: 25px;
+}
+
+
+.album-info > p:not(.small-title):not(.artist-name) {
+  color: #aaa;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   ARTISTS
+========================= */
+
+.artists-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+
+.artist-card {
+  background: #0c0c0c;
+
+  border: 1px solid #222;
+
+  overflow: hidden;
+}
+
+
+.artist-card img {
+  width: 100%;
+
+  height: 400px;
+
+  object-fit: cover;
+}
+
+
+.artist-card-content {
+  padding: 25px;
+}
+
+
+.artist-card-content h3 {
+  font-size: 25px;
+
+  margin-bottom: 5px;
+}
+
+
+.artist-card-content p {
+  color: #888;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.label-container {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+
+.label-logo-container {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+
+.label-logo {
+  width: 100%;
+
+  max-width: 400px;
+
+  border-radius: 10px;
+}
+
+
+.label-content h3 {
+  font-size: 38px;
+
+  margin-bottom: 20px;
+}
+
+
+.label-content p:not(.small-title) {
+  color: #aaa;
+
+  margin-bottom: 20px;
+}
+
+
+.drill-records {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 80px;
+
+  padding-top: 50px;
+
+  border-top: 1px solid #222;
+}
+
+
+.drill-records img {
+  width: 120px;
+
+  height: 120px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+.drill-records h3 {
+  font-size: 30px;
+
+  margin-bottom: 10px;
+}
+
+
+.drill-records p {
+  color: #888;
+}
+
+
+/* =========================
+   PROJECT
+========================= */
+
+.project-container {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+}
+
+
+.project-image img {
+  width: 100%;
+
+  max-width: 550px;
+
+  border-radius: 8px;
+}
+
+
+.project-content h3 {
+  font-size: 45px;
+
+  line-height: 1.1;
+
+  margin-bottom: 20px;
+}
+
+
+.project-content p:not(.small-title) {
+  color: #aaa;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   BIG SCAN ME
+========================= */
+
+.scan-container {
+  text-align: center;
+}
+
+
+.scan-image {
+  width: 100%;
+
+  max-width: 600px;
+
+  margin: 0 auto 25px;
+
+  border-radius: 10px;
+}
+
+
+.scan-container p {
+  color: #888;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+  text-align: center;
+}
+
+
+.contact-section .section-heading {
+  justify-content: center;
+}
+
+
+.contact-content h3 {
+  font-size: 50px;
+
+  margin-bottom: 15px;
+}
+
+
+.contact-content p {
+  max-width: 600px;
+
+  margin: 0 auto 30px;
+
+  color: #aaa;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
-    background: #000000;
-    text-align: center;
-    padding: 30px 20px;
-    color: #999;
-    border-top: 1px solid #333;
+  padding: 50px 8%;
+
+  text-align: center;
+
+  border-top: 1px solid #222;
+
+  background: #000;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 24px;
-    }
 
-    .hero h2 {
-        font-size: 34px;
-    }
+.footer-logo {
+  display: flex;
 
-    nav a {
-        display: inline-block;
-        margin: 5px 8px;
-    }
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+
+.footer-logo img {
+  width: 45px;
+
+  height: 45px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+
+.footer-logo h3 {
+  letter-spacing: 2px;
+}
+
+
+footer p {
+  color: #666;
+
+  font-size: 13px;
+
+  margin: 5px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .header {
+    padding: 12px 5%;
+  }
+
+
+  .menu-button {
+    display: block;
+  }
+
+
+  .navigation {
+    position: absolute;
+
+    top: 82px;
+
+    left: 0;
+
+    width: 100%;
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    background: #050505;
+
+    border-bottom: 1px solid #222;
+  }
+
+
+  .navigation.active {
+    display: flex;
+  }
+
+
+  .navigation a {
+    padding: 18px 6%;
+
+    border-bottom: 1px solid #222;
+  }
+
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    padding: 60px 6%;
+
+    text-align: center;
+
+    gap: 40px;
+  }
+
+
+  .hero-content {
+    margin: auto;
+  }
+
+
+  .hero-content h2 {
+    font-size: 60px;
+  }
+
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+
+  .section {
+    padding: 70px 6%;
+  }
+
+
+  .about-grid,
+  .album-card,
+  .artists-grid,
+  .label-container,
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+
+  .album-info h3,
+  .project-content h3 {
+    font-size: 35px;
+  }
+
+
+  .artist-card img {
+    height: 350px;
+  }
+
+
+  .label-container {
+    gap: 40px;
+  }
+
+
+  .drill-records {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+
+  .contact-content h3 {
+    font-size: 40px;
+  }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 450px) {
+
+  .brand-name h1 {
+    font-size: 16px;
+  }
+
+
+  .brand-name span {
+    font-size: 8px;
+  }
+
+
+  .logo {
+    width: 45px;
+
+    height: 45px;
+  }
+
+
+  .hero-content h2 {
+    font-size: 48px;
+  }
+
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+
+  .artist-card img {
+    height: 300px;
+  }
+
 }
