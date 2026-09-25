@@ -1,29 +1,24 @@
-// ================================
 // MOBILE MENU
-// ================================
 
 const menuButton = document.getElementById("menu-button");
-const navigation = document.getElementById("nav");
+const nav = document.getElementById("nav");
 
-if (menuButton && navigation) {
+if (menuButton && nav) {
 
   menuButton.addEventListener("click", function () {
 
-    navigation.classList.toggle("active");
+    nav.classList.toggle("active");
 
   });
 
 
-  // Close menu when a link is clicked
+  const links = nav.querySelectorAll("a");
 
-  const navigationLinks =
-    navigation.querySelectorAll("a");
-
-  navigationLinks.forEach(function (link) {
+  links.forEach(function (link) {
 
     link.addEventListener("click", function () {
 
-      navigation.classList.remove("active");
+      nav.classList.remove("active");
 
     });
 
@@ -32,68 +27,28 @@ if (menuButton && navigation) {
 }
 
 
-
-// ================================
 // FOOTER YEAR
-// ================================
 
-const yearElement = document.getElementById("year");
+const year = document.getElementById("year");
 
-if (yearElement) {
+if (year) {
 
-  yearElement.textContent =
-    new Date().getFullYear();
+  year.textContent = new Date().getFullYear();
 
 }
 
 
-
-// ================================
-// SMOOTH SCROLL
-// ================================
-
-document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-
-  link.addEventListener("click", function (event) {
-
-    const targetId =
-      this.getAttribute("href");
-
-    if (targetId === "#") {
-      return;
-    }
-
-    const target =
-      document.querySelector(targetId);
-
-    if (target) {
-
-      event.preventDefault();
-
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-
-    }
-
-  });
-
-});
-
-
-
-// ================================
 // IMAGE ERROR CHECK
-// ================================
 
-document.querySelectorAll("img").forEach(function (image) {
+const images = document.querySelectorAll("img");
+
+images.forEach(function (image) {
 
   image.addEventListener("error", function () {
 
     console.log(
-      "Image could not be loaded:",
-      image.getAttribute("src")
+      "Could not load image:",
+      image.src
     );
 
   });
