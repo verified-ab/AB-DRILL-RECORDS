@@ -4,1157 +4,566 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta name="description" content="AB MUSIC_ - AB DRILL RECORDS. Independent artist, producer, record label and creative platform based in Lagos, Nigeria.">
+
+  <meta name="keywords" content="AB MUSIC, AB DRILL RECORDS, AB MUSIC RECORDS, AB MUSIC Nigeria, Rich Kel, Audiomack">
+
+  <meta name="author" content="AB MUSIC_">
+
   <title>AB MUSIC_ | AB DRILL RECORDS</title>
 
-  <meta
-    name="description"
-    content="AB MUSIC_ — independent artist, producer and record label founder from Lagos, Nigeria. Home of AB MUSIC RECORDS LTD, AB DRILL RECORDS, BIG SCAN ME and AB MUSIC Studio."
-  >
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --black: #050505;
-      --dark: #0b0b0b;
-      --card: #111111;
-      --red: #ff1744;
-      --white: #ffffff;
-      --grey: #a0a0a0;
-      --line: #252525;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--black);
-      color: var(--white);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* NAVIGATION */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      padding: 20px 7%;
-
-      background: rgba(5, 5, 5, 0.94);
-      backdrop-filter: blur(15px);
-
-      border-bottom: 1px solid var(--line);
-    }
-
-    .logo {
-      font-size: 21px;
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
-
-    .logo span {
-      color: var(--red);
-    }
-
-    nav {
-      display: flex;
-      gap: 25px;
-    }
-
-    nav a {
-      color: #ccc;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    nav a:hover {
-      color: var(--red);
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 92vh;
-
-      padding: 90px 7%;
-
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-
-      gap: 70px;
-
-      overflow: hidden;
-    }
-
-    .eyebrow {
-      color: var(--red);
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 4px;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: clamp(55px, 8vw, 115px);
-      line-height: 0.88;
-      text-transform: uppercase;
-      letter-spacing: -6px;
-      font-weight: 900;
-    }
-
-    .hero h1 span {
-      color: var(--red);
-    }
-
-    .hero p {
-      max-width: 600px;
-      margin: 30px 0;
-      color: var(--grey);
-      font-size: 17px;
-    }
-
-    .button {
-      display: inline-block;
-
-      padding: 15px 27px;
-
-      background: var(--red);
-      color: white;
-
-      border-radius: 3px;
-
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-
-      transition: 0.3s;
-    }
-
-    .button:hover {
-      background: white;
-      color: black;
-      transform: translateY(-3px);
-    }
-
-    /* VINYL */
-
-    .disc-area {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .disc {
-      width: min(440px, 80vw);
-      aspect-ratio: 1;
-
-      border-radius: 50%;
-
-      background:
-        repeating-radial-gradient(
-          circle,
-          #050505 0px,
-          #171717 2px,
-          #050505 4px,
-          #101010 6px
-        );
-
-      box-shadow:
-        0 0 0 8px #191919,
-        0 30px 90px rgba(0, 0, 0, 0.9);
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      animation: spin 18s linear infinite;
-    }
-
-    .disc-label {
-      width: 155px;
-      height: 155px;
-
-      border-radius: 50%;
-
-      background: var(--red);
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      text-align: center;
-
-      font-weight: 900;
-      font-size: 15px;
-      letter-spacing: 2px;
-
-      box-shadow: inset 0 0 25px rgba(0,0,0,.4);
-    }
-
-    .disc-hole {
-      position: absolute;
-
-      width: 12px;
-      height: 12px;
-
-      border-radius: 50%;
-
-      background: black;
-    }
-
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* SECTIONS */
-
-    section {
-      padding: 110px 7%;
-    }
-
-    .section-label {
-      color: var(--red);
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
-
-    .section-title {
-      font-size: clamp(40px, 6vw, 80px);
-      line-height: .95;
-      text-transform: uppercase;
-      margin: 15px 0 50px;
-    }
-
-    /* ABOUT */
-
-    .about {
-      background: var(--dark);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .about h2 {
-      font-size: clamp(40px, 6vw, 75px);
-      line-height: .95;
-      text-transform: uppercase;
-    }
-
-    .about h2 span {
-      color: var(--red);
-    }
-
-    .about p {
-      color: var(--grey);
-      font-size: 17px;
-      margin-bottom: 20px;
-    }
-
-    /* ECOSYSTEM */
-
-    .ecosystem {
-      background: var(--black);
-    }
-
-    .ecosystem-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .ecosystem-card {
-      padding: 35px;
-
-      background: var(--card);
-      border: 1px solid var(--line);
-
-      min-height: 240px;
-
-      transition: .3s;
-    }
-
-    .ecosystem-card:hover {
-      transform: translateY(-7px);
-      border-color: var(--red);
-    }
-
-    .ecosystem-card h3 {
-      font-size: 25px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
-
-    .ecosystem-card h3 span {
-      color: var(--red);
-    }
-
-    .ecosystem-card p {
-      color: var(--grey);
-      font-size: 14px;
-    }
-
-    /* ALBUM */
-
-    .release {
-      background: #090909;
-    }
-
-    .album {
-      display: grid;
-      grid-template-columns: 380px 1fr;
-      gap: 60px;
-    }
-
-    .album-cover {
-      aspect-ratio: 1;
-
-      display: flex;
-      align-items: flex-end;
-
-      padding: 28px;
-
-      background:
-        radial-gradient(
-          circle at center,
-          var(--red) 0 8%,
-          transparent 8.5%
-        ),
-        radial-gradient(
-          circle at center,
-          #300008 0 30%,
-          transparent 30.5%
-        ),
-        linear-gradient(145deg, #1a1a1a, #030303);
-
-      border: 1px solid var(--line);
-
-      box-shadow: 0 30px 70px rgba(0,0,0,.7);
-    }
-
-    .cover-title {
-      font-size: 35px;
-      font-weight: 900;
-      line-height: .9;
-      text-transform: uppercase;
-    }
-
-    .cover-title span {
-      color: var(--red);
-    }
-
-    .album-info h3 {
-      font-size: clamp(35px, 5vw, 70px);
-      line-height: .9;
-      text-transform: uppercase;
-      margin: 12px 0;
-    }
-
-    .artist-name {
-      color: var(--red);
-      font-weight: bold;
-      letter-spacing: 3px;
-    }
-
-    .album-description {
-      color: var(--grey);
-      max-width: 700px;
-      margin: 25px 0;
-    }
-
-    /* TRACKLIST */
-
-    .tracks {
-      margin-top: 40px;
-      border-top: 1px solid var(--line);
-    }
-
-    .track {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-
-      padding: 15px 5px;
-
-      border-bottom: 1px solid var(--line);
-
-      transition: .2s;
-    }
-
-    .track:hover {
-      background: #151515;
-      padding-left: 15px;
-    }
-
-    .track-number {
-      width: 35px;
-      color: #666;
-    }
-
-    .track-name {
-      font-weight: bold;
-    }
-
-    /* BIG SCAN ME */
-
-    .bigscan {
-      position: relative;
-      overflow: hidden;
-
-      background:
-        radial-gradient(
-          circle at 80% 20%,
-          rgba(255,23,68,.25),
-          transparent 30%
-        ),
-        #080808;
-    }
-
-    .bigscan h2 {
-      font-size: clamp(55px, 10vw, 140px);
-      line-height: .8;
-      text-transform: uppercase;
-      font-weight: 900;
-    }
-
-    .bigscan h2 span {
-      color: var(--red);
-    }
-
-    .bigscan-content {
-      max-width: 850px;
-    }
-
-    .bigscan-content p {
-      color: var(--grey);
-      font-size: 18px;
-      margin: 35px 0;
-    }
-
-    .scan-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      margin-top: 40px;
-    }
-
-    .scan-item {
-      padding: 22px;
-
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.02);
-    }
-
-    .scan-item strong {
-      display: block;
-      color: var(--red);
-      margin-bottom: 5px;
-    }
-
-    .scan-item span {
-      color: var(--grey);
-      font-size: 14px;
-    }
-
-    /* RICH KEL */
-
-    .richkel {
-      background: var(--dark);
-    }
-
-    .richkel-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .richkel h2 {
-      font-size: clamp(50px, 7vw, 90px);
-      line-height: .85;
-      text-transform: uppercase;
-    }
-
-    .richkel h2 span {
-      color: var(--red);
-    }
-
-    .richkel p {
-      color: var(--grey);
-      font-size: 17px;
-      margin: 20px 0;
-    }
-
-    .collaboration {
-      margin-top: 30px;
-
-      padding: 25px;
-
-      border-left: 4px solid var(--red);
-      background: #151515;
-    }
-
-    .collaboration strong {
-      color: var(--red);
-    }
-
-    /* STUDIO */
-
-    .studio {
-      text-align: center;
-      background: var(--black);
-    }
-
-    .studio p {
-      max-width: 750px;
-      margin: 0 auto 35px;
-      color: var(--grey);
-      font-size: 17px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      padding: 40px 7%;
-
-      display: flex;
-      justify-content: space-between;
-
-      border-top: 1px solid var(--line);
-
-      color: #666;
-
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 850px) {
-
-      nav {
-        display: none;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 70px 6%;
-      }
-
-      .about-grid,
-      .richkel-grid,
-      .album {
-        grid-template-columns: 1fr;
-      }
-
-      .ecosystem-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .scan-list {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 80px 6%;
-      }
-
-      .album-cover {
-        max-width: 400px;
-      }
-
-      footer {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- ================= HEADER ================= -->
 
-  <header>
+  <header class="header">
 
-    <div class="logo">
-      AB <span>MUSIC_</span>
+    <div class="logo-container">
+
+      <img
+        src="images/ab-drill-logo.png.JPG"
+        alt="AB DRILL RECORDS Logo"
+        class="logo"
+      >
+
+      <div class="brand-name">
+        <h1>AB MUSIC_</h1>
+        <span>AB DRILL RECORDS</span>
+      </div>
+
     </div>
 
-    <nav>
+
+    <button
+      id="menu-button"
+      class="menu-button"
+      aria-label="Open navigation menu"
+    >
+      ☰
+    </button>
+
+
+    <nav id="nav" class="navigation">
+
+      <a href="#home">Home</a>
+
       <a href="#about">About</a>
+
       <a href="#music">Music</a>
-      <a href="#bigscan">Big Scan Me</a>
-      <a href="#richkel">Rich Kel</a>
-      <a href="#studio">Studio</a>
+
+      <a href="#artists">Artists</a>
+
+      <a href="#label">Label</a>
+
+      <a href="#scan">BIG SCAN ME</a>
+
+      <a href="#contact">Contact</a>
+
     </nav>
 
   </header>
 
 
-  <!-- HERO -->
 
-  <section class="hero">
+  <!-- ================= HERO ================= -->
 
-    <div>
+  <main>
 
-      <div class="eyebrow">
-        LAGOS, NIGERIA • AB MUSIC_
-      </div>
+    <section id="home" class="hero">
 
-      <h1>
-        MORE<br>
-        THAN A<br>
-        <span>LABEL.</span>
-      </h1>
+      <div class="hero-image-container">
 
-      <p>
-        AB MUSIC_ is an independent music artist, producer and
-        record label founder building a movement through music,
-        technology, storytelling and culture.
-      </p>
-
-      <a href="#music" class="button">
-        Explore The Music
-      </a>
-
-    </div>
-
-
-    <div class="disc-area">
-
-      <div class="disc">
-
-        <div class="disc-label">
-          AB MUSIC_<br>
-          RECORDS
-        </div>
-
-        <div class="disc-hole"></div>
+        <img
+          src="images/artist.png.jpg"
+          alt="AB MUSIC_ Artist"
+          class="hero-image"
+        >
 
       </div>
 
-    </div>
 
-  </section>
+      <div class="hero-content">
 
-
-  <!-- ABOUT -->
-
-  <section class="about" id="about">
-
-    <div class="about-grid">
-
-      <div>
-
-        <div class="section-label">
-          THE ARTIST
-        </div>
+        <p class="small-title">
+          WELCOME TO
+        </p>
 
         <h2>
-          AB MUSIC_<br>
-          <span>FROM LAGOS.</span>
-        </h2>
-
-      </div>
-
-      <div>
-
-        <p>
-          AB MUSIC_ is the professional music identity of
-          Abraham Onyebuchi, an independent artist, producer
-          and record label founder based in Lagos, Nigeria.
-        </p>
-
-        <p>
-          The project blends Trap, Future Bass, Dark Hip-Hop,
-          Rap and Drill with Afro-inspired sounds.
-        </p>
-
-        <p>
-          His music explores resilience, raw street storytelling,
-          personal pain, ambition and the experiences that shape
-          real life.
-        </p>
-
-        <p>
-          AB MUSIC_ represents both the solo artist and the wider
-          creative ecosystem operating through
-          <strong>AB MUSIC RECORDS LTD</strong> and
-          <strong>AB DRILL RECORDS</strong>.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ECOSYSTEM -->
-
-  <section class="ecosystem">
-
-    <div class="section-label">
-      THE MOVEMENT
-    </div>
-
-    <h2 class="section-title">
-      MORE THAN A LABEL.
-    </h2>
-
-    <div class="ecosystem-grid">
-
-      <div class="ecosystem-card">
-
-        <h3>
-          AB MUSIC <span>RECORDS LTD</span>
-        </h3>
-
-        <p>
-          The wider record label and creative business behind
-          AB MUSIC_, developing artists, music projects,
-          productions and creative opportunities.
-        </p>
-
-      </div>
-
-
-      <div class="ecosystem-card">
-
-        <h3>
-          AB <span>DRILL RECORDS</span>
-        </h3>
-
-        <p>
-          A focused label arm built around Drill, Trap,
-          Dark Hip-Hop, Afro-inspired sounds and authentic
-          street storytelling.
-        </p>
-
-      </div>
-
-
-      <div class="ecosystem-card">
-
-        <h3>
-          AB MUSIC <span>STUDIO</span>
-        </h3>
-
-        <p>
-          A creative recording and mixing space supporting
-          independent artists and helping transform ideas
-          into finished music.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- MUSIC -->
-
-  <section class="release" id="music">
-
-    <div class="section-label">
-      FEATURED ALBUM
-    </div>
-
-    <h2 class="section-title">
-      THEY ARE<br>
-      LOOKING FOR ME
-    </h2>
-
-
-    <div class="album">
-
-      <div class="album-cover">
-
-        <div class="cover-title">
-          THEY ARE<br>
-          LOOKING<br>
-          FOR <span>ME</span>
-        </div>
-
-      </div>
-
-
-      <div class="album-info">
-
-        <div class="artist-name">
           AB MUSIC_
-        </div>
-
-        <h3>
-          THEY ARE<br>
-          LOOKING FOR ME
-        </h3>
-
-        <p class="album-description">
-          A 2026 R&B and Hip-Hop / Drill project exploring
-          darkness, experience, resilience and the pressure
-          of being watched while chasing a bigger dream.
-        </p>
-
-        <a
-          class="button"
-          href="https://audiomack.com/abmusic_/album/they-are-looking-for-me?share-user-id=43020425"
-          target="_blank"
-        >
-          ▶ LISTEN ON AUDIOMACK
-        </a>
-
-
-        <div class="tracks">
-
-          <div class="track">
-            <span class="track-number">01</span>
-            <span class="track-name">Before They Know ✟</span>
-          </div>
-
-          <div class="track">
-            <span class="track-number">02</span>
-            <span class="track-name">What is it</span>
-          </div>
-
-          <div class="track">
-            <span class="track-number">03</span>
-            <span class="track-name">Life Na Dice</span>
-          </div>
-
-          <div class="track">
-            <span class="track-number">04</span>
-            <span class="track-name">Gone Down _</span>
-          </div>
-
-          <div class="track">
-            <span class="track-number">05</span>
-            <span class="track-name">Stop dis Shit</span>
-          </div>
-
-          <div class="track">
-            <span class="track-number">06</span>
-            <span class="track-name">JET MOOD</span>
-          </div>
-
-          <div class="track">
-            <span class="track-number">07</span>
-            <span class="track-name">Time is less</span>
-          </div>
-
-          <div class="track">
-            <span class="track-number">08</span>
-            <span class="track-name">not made for hell</span>
-          </div>
-
-          <div class="track">
-            <span class="track-number">09</span>
-            <span class="track-name">Unicorn 🦄</span>
-          </div>
-
-          <div class="track">
-            <span class="track-number">10</span>
-            <span class="track-name">BIG-MOVE</span>
-          </div>
-
-          <div class="track">
-            <span class="track-number">11</span>
-            <span class="track-name">Tattoo</span>
-          </div>
-
-          <div class="track">
-            <span class="track-number">12</span>
-            <span class="track-name">Self Mind Ⓜ️x🅰️</span>
-          </div>
-
-          <div class="track">
-            <span class="track-number">13</span>
-            <span class="track-name">Lord my aim</span>
-          </div>
-
-          <div class="track">
-            <span class="track-number">14</span>
-            <span class="track-name">Yeahaa</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- BIG SCAN ME -->
-
-  <section class="bigscan" id="bigscan">
-
-    <div class="bigscan-content">
-
-      <div class="section-label">
-        THE CORE PROJECT
-      </div>
-
-      <h2>
-        BIG<br>
-        <span>SCAN ME</span>
-      </h2>
-
-      <p>
-        BIG SCAN ME is the core umbrella project and broader
-        ecosystem created by Abraham Onyebuchi (AB) through
-        AB MUSIC RECORDS LTD and AB DRILL RECORDS.
-      </p>
-
-      <p>
-        It goes beyond a single song. BIG SCAN ME connects
-        music, technology, fan engagement, exclusive content
-        and opportunities for independent artists.
-      </p>
-
-
-      <div class="scan-list">
-
-        <div class="scan-item">
-          <strong>01 — MUSIC PLATFORM</strong>
-          <span>
-            A developing global music platform designed to
-            connect independent artists directly with fans.
-          </span>
-        </div>
-
-        <div class="scan-item">
-          <strong>02 — MUSIC PROJECTS</strong>
-          <span>
-            Music, albums, drill tracks and motivational
-            podcast content built around the BIG SCAN ME concept.
-          </span>
-        </div>
-
-        <div class="scan-item">
-          <strong>03 — THE 1 BILLION BOOKLET</strong>
-          <span>
-            An interactive ecosystem concept featuring exclusive
-            drops, VIP experiences, hidden content and opportunities.
-          </span>
-        </div>
-
-        <div class="scan-item">
-          <strong>04 — GLOBAL VISION</strong>
-          <span>
-            Bridging music distribution, technology and direct
-            fan engagement on a global scale.
-          </span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- RICH KEL -->
-
-  <section class="richkel" id="richkel">
-
-    <div class="richkel-grid">
-
-      <div>
-
-        <div class="section-label">
-          AB DRILL RECORDS ARTIST
-        </div>
-
-        <h2>
-          RICH<br>
-          <span>KEL</span>
         </h2>
 
+        <h3>
+          AB DRILL RECORDS
+        </h3>
+
+        <p>
+          Independent artist, producer, record label founder
+          and creative force based in Lagos, Nigeria.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="https://audiomack.com/abmusic_/album/they-are-looking-for-me?share-user-id=43020425"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+          >
+            Listen on Audiomack
+          </a>
+
+          <a
+            href="#about"
+            class="button secondary-button"
+          >
+            Explore
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="section">
+
+      <div class="section-heading">
+
+        <span>01</span>
+
+        <h2>About AB MUSIC_</h2>
+
       </div>
 
 
-      <div>
+      <div class="about-grid">
 
-        <p>
-          Rich Kel is a recording artist connected to AB DRILL
-          RECORDS whose music draws heavily from life experience
-          and true-life stories.
-        </p>
+        <div class="about-image">
 
-        <p>
-          His mission is to touch lives through music, spread
-          good vibes and positive intentions, and make a
-          difference through his lyrics.
-        </p>
-
-        <p>
-          Rich Kel represents the belief that real experiences
-          can become music that gives people strength, happiness
-          and something to smile about.
-        </p>
-
-        <p>
-          He continues to build a strong relationship with his
-          fans and supporters while using his music to tell
-          stories and inspire change.
-        </p>
-
-
-        <div class="collaboration">
-
-          <strong>
-            UPCOMING COLLABORATION
-          </strong>
-
-          <br><br>
-
-          AB DRILL RECORDS is teaming up with
-          <strong>Massive Dream</strong> for the release of
-
-          <br><br>
-
-          <strong>Ⓜ️x🅰️ SELF MADE</strong>
-
-          <br><br>
-
-          A collaboration bringing both labels and artists
-          together through music.
+          <img
+            src="images/artist.png.jpg"
+            alt="AB MUSIC_"
+          >
 
         </div>
 
 
-        <br>
+        <div class="about-content">
+
+          <h3>
+            AB MUSIC_ — Artist, Producer & Founder
+          </h3>
+
+          <p>
+            AB MUSIC_ is an independent music artist, producer
+            and record label founder based in Lagos, Nigeria.
+          </p>
+
+          <p>
+            The AB MUSIC_ brand represents music, production,
+            creative projects and the wider AB MUSIC RECORDS LTD
+            and AB DRILL RECORDS movement.
+          </p>
+
+          <p>
+            The platform is focused on music, creativity,
+            entertainment and building a unique independent
+            creative identity.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= MUSIC ================= -->
+
+    <section id="music" class="section dark-section">
+
+      <div class="section-heading">
+
+        <span>02</span>
+
+        <h2>Music</h2>
+
+      </div>
+
+
+      <div class="album-card">
+
+        <div class="album-image">
+
+          <img
+            src="images/album-cover.jpg.jpg"
+            alt="They Are Looking For Me Album Cover"
+          >
+
+        </div>
+
+
+        <div class="album-info">
+
+          <p class="small-title">
+            LATEST PROJECT
+          </p>
+
+          <h3>
+            They Are Looking For Me
+          </h3>
+
+          <p class="artist-name">
+            AB MUSIC_
+          </p>
+
+          <p>
+            Discover the latest project from AB MUSIC_
+            and listen to the music on Audiomack.
+          </p>
+
+          <a
+            href="https://audiomack.com/abmusic_/album/they-are-looking-for-me?share-user-id=43020425"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+          >
+            Play on Audiomack
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= ARTISTS ================= -->
+
+    <section id="artists" class="section">
+
+      <div class="section-heading">
+
+        <span>03</span>
+
+        <h2>Artists</h2>
+
+      </div>
+
+
+      <div class="artists-grid">
+
+
+        <!-- AB MUSIC -->
+
+        <article class="artist-card">
+
+          <img
+            src="images/artist.png.jpg"
+            alt="AB MUSIC_"
+          >
+
+          <div class="artist-card-content">
+
+            <h3>
+              AB MUSIC_
+            </h3>
+
+            <p>
+              Artist • Producer • Founder
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- RICH KEL -->
+
+        <article class="artist-card">
+
+          <img
+            src="images/rich.png.heic"
+            alt="Rich Kel"
+          >
+
+          <div class="artist-card-content">
+
+            <h3>
+              Rich Kel
+            </h3>
+
+            <p>
+              Artist
+            </p>
+
+            <a
+              href="https://audiomack.com/richkelmusic"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="small-button"
+            >
+              Audiomack
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= LABEL ================= -->
+
+    <section id="label" class="section label-section">
+
+      <div class="section-heading">
+
+        <span>04</span>
+
+        <h2>The Label</h2>
+
+      </div>
+
+
+      <div class="label-container">
+
+
+        <div class="label-logo-container">
+
+          <img
+            src="images/Label-logo.png.heic"
+            alt="AB MUSIC RECORDS LTD Logo"
+            class="label-logo"
+          >
+
+        </div>
+
+
+        <div class="label-content">
+
+          <p class="small-title">
+            AB MUSIC RECORDS LTD
+          </p>
+
+          <h3>
+            Music. Creativity. Identity.
+          </h3>
+
+          <p>
+            AB MUSIC RECORDS LTD is the record label and
+            creative platform associated with AB MUSIC_.
+          </p>
+
+          <p>
+            The label supports music, artists, production
+            and creative projects under the AB brand.
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="drill-records">
+
+        <img
+          src="images/ab-drill-logo.png.JPG"
+          alt="AB DRILL RECORDS Logo"
+        >
+
+        <div>
+
+          <h3>
+            AB DRILL RECORDS
+          </h3>
+
+          <p>
+            An independent creative and music identity
+            under the AB MUSIC_ brand.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= THEY ARE LOOKING FOR ME ================= -->
+
+    <section id="they" class="section dark-section">
+
+      <div class="section-heading">
+
+        <span>05</span>
+
+        <h2>They Are Looking For Me</h2>
+
+      </div>
+
+
+      <div class="project-container">
+
+        <div class="project-image">
+
+          <img
+            src="images/They.png.heic"
+            alt="They Are Looking For Me"
+          >
+
+        </div>
+
+
+        <div class="project-content">
+
+          <p class="small-title">
+            AB MUSIC_
+          </p>
+
+          <h3>
+            They Are Looking For Me
+          </h3>
+
+          <p>
+            Explore the project and listen to the music
+            on Audiomack.
+          </p>
+
+          <a
+            href="https://audiomack.com/abmusic_/album/they-are-looking-for-me?share-user-id=43020425"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button"
+          >
+            Listen Now
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= BIG SCAN ME ================= -->
+
+    <section id="scan" class="section">
+
+      <div class="section-heading">
+
+        <span>06</span>
+
+        <h2>BIG SCAN ME</h2>
+
+      </div>
+
+
+      <div class="scan-container">
+
+        <img
+          src="images/BIG SCAN ME.JPG"
+          alt="BIG SCAN ME"
+          class="scan-image"
+        >
+
+        <p>
+          Scan and explore AB MUSIC_.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="section contact-section">
+
+      <div class="section-heading">
+
+        <span>07</span>
+
+        <h2>Contact</h2>
+
+      </div>
+
+
+      <div class="contact-content">
+
+        <h3>
+          AB MUSIC_
+        </h3>
+
+        <p>
+          For music, production, label and business enquiries,
+          connect with AB MUSIC_.
+        </p>
 
         <a
-          href="https://audiomack.com/richkelmusic"
+          href="https://audiomack.com/abmusic_"
           target="_blank"
+          rel="noopener noreferrer"
           class="button"
         >
-          LISTEN TO RICH KEL
+          Visit Audiomack
         </a>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
-
-
-  <!-- STUDIO -->
-
-  <section class="studio" id="studio">
-
-    <div class="section-label">
-      AB MUSIC STUDIO
-    </div>
-
-    <h2 class="section-title">
-      BUILD.<br>
-      RECORD.<br>
-      <span style="color:#ff1744;">RELEASE.</span>
-    </h2>
-
-    <p>
-      AB MUSIC Studio is a creative space focused on recording,
-      mixing and developing independent artists. The studio is
-      part of the wider AB MUSIC ecosystem — connecting artists,
-      producers, music projects and new opportunities.
-    </p>
-
-    <a href="#contact" class="button">
-      WORK WITH AB MUSIC
-    </a>
-
-  </section>
+  </main>
 
 
-  <!-- CONTACT -->
 
-  <section id="contact" class="about">
-
-    <div style="text-align:center;">
-
-      <div class="section-label">
-        CONNECT
-      </div>
-
-      <h2>
-        THE MOVEMENT<br>
-        <span>IS JUST STARTING.</span>
-      </h2>
-
-      <p style="max-width:700px;margin:30px auto;color:#aaa;">
-        Follow the music, discover new artists, support
-        independent talent and stay connected with the
-        AB MUSIC ecosystem.
-      </p>
-
-      <a
-        href="https://audiomack.com/abmusic_/album/they-are-looking-for-me?share-user-id=43020425"
-        target="_blank"
-        class="button"
-      >
-        AB MUSIC_ ON AUDIOMACK
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
 
   <footer>
 
-    <span>
-      © 2026 AB MUSIC RECORDS LTD
-    </span>
+    <div class="footer-logo">
 
-    <span>
-      AB DRILL RECORDS • BIG SCAN ME
-    </span>
+      <img
+        src="images/ab-drill-logo.png.JPG"
+        alt="AB DRILL RECORDS"
+      >
 
-    <span>
-      LAGOS, NIGERIA
-    </span>
+      <h3>
+        AB MUSIC_
+      </h3>
+
+    </div>
+
+
+    <p>
+      © <span id="year"></span> AB MUSIC_ | AB DRILL RECORDS
+    </p>
+
+    <p>
+      Lagos, Nigeria
+    </p>
 
   </footer>
+
+
+  <script src="script.js"></script>
 
 </body>
 </html>
