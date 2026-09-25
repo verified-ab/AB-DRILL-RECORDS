@@ -1,32 +1,24 @@
-/* =========================
-   RESET
-========================= */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
   background: #050505;
-  color: #ffffff;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
-
 
 img {
   max-width: 100%;
   display: block;
 }
-
 
 a {
   color: inherit;
@@ -34,16 +26,12 @@ a {
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 .header {
   position: sticky;
   top: 0;
-  z-index: 1000;
-
-  width: 100%;
+  z-index: 999;
 
   display: flex;
   align-items: center;
@@ -51,10 +39,10 @@ a {
 
   padding: 15px 6%;
 
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.96);
+
   border-bottom: 1px solid #222;
 }
-
 
 .logo-container {
   display: flex;
@@ -62,52 +50,44 @@ a {
   gap: 12px;
 }
 
-
 .logo {
   width: 55px;
   height: 55px;
 
-  object-fit: cover;
-
   border-radius: 50%;
+  object-fit: cover;
 }
 
-
-.brand-name h1 {
+.logo-container h1 {
   font-size: 20px;
   letter-spacing: 2px;
 }
 
-
-.brand-name span {
+.logo-container span {
+  color: #888;
   font-size: 10px;
-  color: #aaa;
   letter-spacing: 2px;
 }
 
-
-.navigation {
+#nav {
   display: flex;
   gap: 25px;
 }
 
-
-.navigation a {
-  font-size: 14px;
+#nav a {
+  font-size: 13px;
   font-weight: bold;
   transition: 0.3s;
 }
 
-
-.navigation a:hover {
-  opacity: 0.6;
+#nav a:hover {
+  opacity: 0.5;
 }
-
 
 .menu-button {
   display: none;
 
-  background: transparent;
+  background: none;
   border: none;
 
   color: white;
@@ -118,9 +98,7 @@ a {
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
   min-height: 90vh;
@@ -135,118 +113,89 @@ a {
   padding: 80px 8%;
 }
 
-
-.hero-image-container {
-  display: flex;
-  justify-content: center;
-}
-
-
-.hero-image {
+.hero-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
+
+  margin: auto;
 
   border-radius: 10px;
-
-  object-fit: cover;
 }
-
 
 .hero-content {
   max-width: 600px;
 }
 
+.eyebrow {
+  color: #888;
 
-.small-title {
   font-size: 12px;
 
   letter-spacing: 4px;
 
-  color: #aaa;
-
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
-
 
 .hero-content h2 {
-  font-size: clamp(50px, 8vw, 100px);
+  font-size: clamp(55px, 8vw, 100px);
 
-  line-height: 0.95;
+  line-height: 0.9;
 
-  letter-spacing: -4px;
+  letter-spacing: -5px;
 
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-
 .hero-content h3 {
-  font-size: 22px;
-
   letter-spacing: 4px;
 
   margin-bottom: 25px;
 }
 
-
-.hero-content p {
-  color: #bbb;
-
-  max-width: 500px;
+.hero-content p:not(.eyebrow) {
+  color: #aaa;
 
   margin-bottom: 30px;
 }
 
-
-.hero-buttons {
+.buttons {
   display: flex;
-
-  gap: 15px;
-
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* BUTTON */
 
 .button {
   display: inline-block;
 
   padding: 13px 25px;
 
-  background: white;
+  background: #fff;
+  color: #000;
 
-  color: black;
-
-  border: 1px solid white;
+  border: 1px solid #fff;
 
   font-weight: bold;
 
   transition: 0.3s;
 }
 
-
 .button:hover {
   background: transparent;
-
-  color: white;
+  color: #fff;
 }
 
-
-.secondary-button {
+.button.outline {
   background: transparent;
-
-  color: white;
+  color: #fff;
 }
 
-
-.secondary-button:hover {
-  background: white;
-
-  color: black;
+.button.outline:hover {
+  background: #fff;
+  color: #000;
 }
-
 
 .small-button {
   display: inline-block;
@@ -258,33 +207,25 @@ a {
   border: 1px solid #555;
 
   font-size: 12px;
-
-  transition: 0.3s;
 }
-
 
 .small-button:hover {
-  background: white;
-
-  color: black;
+  background: #fff;
+  color: #000;
 }
 
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 
 .section {
   padding: 100px 8%;
 }
 
-
-.dark-section {
+.dark {
   background: #0b0b0b;
 }
 
-
-.section-heading {
+.heading {
   display: flex;
 
   align-items: center;
@@ -294,84 +235,69 @@ a {
   margin-bottom: 50px;
 }
 
-
-.section-heading span {
-  color: #666;
-
-  font-size: 14px;
+.heading span {
+  color: #555;
 }
 
-
-.section-heading h2 {
+.heading h2 {
   font-size: 38px;
-
-  letter-spacing: -1px;
 }
 
 
-/* =========================
-   ABOUT
-========================= */
+/* TWO COLUMN */
 
-.about-grid {
+.two-column {
   display: grid;
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 60px;
-
   align-items: center;
+
+  gap: 60px;
 }
 
-
-.about-image img {
+.large-image {
   width: 100%;
 
-  max-width: 500px;
+  max-width: 550px;
 
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
-
-.about-content h3 {
-  font-size: 28px;
+.text-content h3 {
+  font-size: 30px;
 
   margin-bottom: 20px;
 }
 
-
-.about-content p {
+.text-content p {
   color: #aaa;
 
   margin-bottom: 18px;
 }
 
 
-/* =========================
-   MUSIC
-========================= */
+/* ALBUM */
 
-.album-card {
+.album {
   display: grid;
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 60px;
-
   align-items: center;
+
+  gap: 60px;
 }
 
-
-.album-image img {
+.album-image {
   width: 100%;
 
   max-width: 550px;
 
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
-
-.album-info h3 {
+.album h3 {
   font-size: 45px;
 
   line-height: 1.1;
@@ -379,26 +305,51 @@ a {
   margin-bottom: 10px;
 }
 
-
-.artist-name {
-  color: #aaa;
+.artist {
+  color: #888;
 
   margin-bottom: 25px;
 }
 
 
-.album-info > p:not(.small-title):not(.artist-name) {
+/* PROJECT */
+
+.project {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+.project-image {
+  width: 100%;
+
+  max-width: 550px;
+
+  border-radius: 10px;
+}
+
+.project h2 {
+  font-size: 45px;
+
+  line-height: 1.1;
+
+  margin-bottom: 20px;
+}
+
+.project p {
   color: #aaa;
 
   margin-bottom: 30px;
 }
 
 
-/* =========================
-   ARTISTS
-========================= */
+/* ARTISTS */
 
-.artists-grid {
+.artists {
   display: grid;
 
   grid-template-columns: repeat(2, 1fr);
@@ -406,107 +357,55 @@ a {
   gap: 30px;
 }
 
-
 .artist-card {
-  background: #0c0c0c;
+  background: #050505;
 
   border: 1px solid #222;
 
   overflow: hidden;
 }
 
-
 .artist-card img {
   width: 100%;
 
-  height: 400px;
+  height: 420px;
 
   object-fit: cover;
 }
 
-
-.artist-card-content {
+.artist-card div {
   padding: 25px;
 }
 
-
-.artist-card-content h3 {
-  font-size: 25px;
-
-  margin-bottom: 5px;
+.artist-card h3 {
+  font-size: 26px;
 }
 
-
-.artist-card-content p {
+.artist-card p {
   color: #888;
 }
 
 
-/* =========================
-   LABEL
-========================= */
+/* LABEL */
 
-.label-container {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 60px;
-
-  align-items: center;
+.label {
+  margin-bottom: 70px;
 }
 
-
-.label-logo-container {
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-}
-
-
-.label-logo {
-  width: 100%;
-
-  max-width: 400px;
-
-  border-radius: 10px;
-}
-
-
-.label-content h3 {
-  font-size: 38px;
-
-  margin-bottom: 20px;
-}
-
-
-.label-content p:not(.small-title) {
-  color: #aaa;
-
-  margin-bottom: 20px;
-}
-
-
-.drill-records {
+.drill {
   display: flex;
 
   align-items: center;
 
   gap: 30px;
 
-  margin-top: 80px;
+  border-top: 1px solid #222;
 
   padding-top: 50px;
-
-  border-top: 1px solid #222;
 }
 
-
-.drill-records img {
+.drill img {
   width: 120px;
-
   height: 120px;
 
   object-fit: cover;
@@ -514,117 +413,66 @@ a {
   border-radius: 50%;
 }
 
-
-.drill-records h3 {
+.drill h3 {
   font-size: 30px;
 
   margin-bottom: 10px;
 }
 
-
-.drill-records p {
+.drill p {
   color: #888;
 }
 
 
-/* =========================
-   PROJECT
-========================= */
+/* SCAN */
 
-.project-container {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 60px;
-
-  align-items: center;
-}
-
-
-.project-image img {
-  width: 100%;
-
-  max-width: 550px;
-
-  border-radius: 8px;
-}
-
-
-.project-content h3 {
-  font-size: 45px;
-
-  line-height: 1.1;
-
-  margin-bottom: 20px;
-}
-
-
-.project-content p:not(.small-title) {
-  color: #aaa;
-
-  margin-bottom: 30px;
-}
-
-
-/* =========================
-   BIG SCAN ME
-========================= */
-
-.scan-container {
+.scan {
   text-align: center;
 }
 
-
-.scan-image {
+.scan img {
   width: 100%;
 
-  max-width: 600px;
+  max-width: 650px;
 
-  margin: 0 auto 25px;
+  margin: auto;
 
   border-radius: 10px;
+
+  margin-bottom: 25px;
 }
 
-
-.scan-container p {
+.scan p {
   color: #888;
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 
-.contact-section {
+.contact {
   text-align: center;
 }
 
-
-.contact-section .section-heading {
+.contact .heading {
   justify-content: center;
 }
 
-
-.contact-content h3 {
-  font-size: 50px;
+.contact h3 {
+  font-size: 55px;
 
   margin-bottom: 15px;
 }
 
+.contact p {
+  color: #aaa;
 
-.contact-content p {
   max-width: 600px;
 
   margin: 0 auto 30px;
-
-  color: #aaa;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
   padding: 50px 8%;
@@ -636,7 +484,6 @@ footer {
   background: #000;
 }
 
-
 .footer-logo {
   display: flex;
 
@@ -644,27 +491,19 @@ footer {
 
   align-items: center;
 
-  gap: 15px;
+  gap: 12px;
 
   margin-bottom: 20px;
 }
 
-
 .footer-logo img {
   width: 45px;
-
   height: 45px;
 
-  border-radius: 50%;
-
   object-fit: cover;
+
+  border-radius: 50%;
 }
-
-
-.footer-logo h3 {
-  letter-spacing: 2px;
-}
-
 
 footer p {
   color: #666;
@@ -675,54 +514,40 @@ footer p {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 800px) {
-
-  .header {
-    padding: 12px 5%;
-  }
-
 
   .menu-button {
     display: block;
   }
 
+  #nav {
+    display: none;
 
-  .navigation {
     position: absolute;
 
-    top: 82px;
-
+    top: 85px;
     left: 0;
 
     width: 100%;
-
-    display: none;
 
     flex-direction: column;
 
     gap: 0;
 
     background: #050505;
-
-    border-bottom: 1px solid #222;
   }
 
-
-  .navigation.active {
+  #nav.active {
     display: flex;
   }
 
-
-  .navigation a {
+  #nav a {
     padding: 18px 6%;
 
     border-bottom: 1px solid #222;
   }
-
 
   .hero {
     grid-template-columns: 1fr;
@@ -730,105 +555,73 @@ footer p {
     padding: 60px 6%;
 
     text-align: center;
-
-    gap: 40px;
   }
-
 
   .hero-content {
     margin: auto;
   }
 
-
   .hero-content h2 {
     font-size: 60px;
   }
 
-
-  .hero-buttons {
+  .buttons {
     justify-content: center;
   }
-
 
   .section {
     padding: 70px 6%;
   }
 
-
-  .about-grid,
-  .album-card,
-  .artists-grid,
-  .label-container,
-  .project-container {
+  .two-column,
+  .album,
+  .project,
+  .artists {
     grid-template-columns: 1fr;
   }
 
-
-  .album-info h3,
-  .project-content h3 {
+  .album h3,
+  .project h2 {
     font-size: 35px;
   }
-
 
   .artist-card img {
     height: 350px;
   }
 
-
-  .label-container {
-    gap: 40px;
-  }
-
-
-  .drill-records {
+  .drill {
     flex-direction: column;
 
     text-align: center;
   }
 
-
-  .contact-content h3 {
+  .contact h3 {
     font-size: 40px;
   }
-
 }
 
 
-/* =========================
-   SMALL PHONES
-========================= */
-
 @media (max-width: 450px) {
-
-  .brand-name h1 {
-    font-size: 16px;
-  }
-
-
-  .brand-name span {
-    font-size: 8px;
-  }
-
 
   .logo {
     width: 45px;
-
     height: 45px;
   }
 
+  .logo-container h1 {
+    font-size: 16px;
+  }
+
+  .logo-container span {
+    font-size: 8px;
+  }
 
   .hero-content h2 {
     font-size: 48px;
   }
 
-
-  .section-heading h2 {
+  .heading h2 {
     font-size: 30px;
-  }
-
-
-  .artist-card img {
-    height: 300px;
   }
 
 }
